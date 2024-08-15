@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: bob
+  datasource: 
+    url: ${bobend_db_url}
+    username: ${bobend_db_username}
+    password: ${bobend_db_password}
+    driverClassName: org.postgresql.Driver
+  jpa: 
+    database: POSTGRESQL 
+    open-in-view: false
+    show-sql: true
+    hibernate: 
+      ddl-auto: create-drop
+      enable_lazy_load_no_trans: true
+    properties: 
+      hibernate: 
+        dialect: org.hibernate.dialect.PostgreSQLDialect
